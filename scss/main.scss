@@ -1,18 +1,42 @@
+$primaryColor: #333;
+$secondaryColor: rgb(255, 255, 255);
+$accentColor: rgb(255, 165, 46);
+
+@import "_contactForm.scss";
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+
 body {
     margin: 0;
     padding: 0;
+    color: $primaryColor;
+    background-color: lighten($primaryColor, 65);
+    height: 100%;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1em;
 }
 
 section#main {
-    font-family: Arial, Helvetica, sans-serif;
+    //Make the main container 100% high so that footer sticks to the bottom of page
+    height: 100%;
+
     display: grid;
     grid-template-columns: auto 1fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
     grid-template-areas:
         "title title title"
-        "sidebar head head"
+        ". head head"
         "sidebar main main"
         "foot foot foot";
-    grid-gap: 20px;
+    grid-gap: 1em;
 
     &>section#title {
         grid-area: title;
@@ -26,12 +50,22 @@ section#main {
 
     &>header {
         grid-area: head;
+
+        &>h2 {
+            margin: 0;
+            padding-left: 10px;
+        }
     }
 
     &>main {
         grid-area: main;
-        margin-right: 10px;
+        margin: 0px 20px;
         text-align: justify;
+
+        &>p {
+            margin: 0;
+            padding-bottom: 15px;
+        }
     }
 
     &>nav {
@@ -39,15 +73,25 @@ section#main {
 
         &>ul {
             list-style: none;
-            margin: 0px 10px;
+            margin: 0 0 0 10px;
             padding: 0;
 
             &>li {
-                padding-bottom: 5px;
+                padding: 10px;
+                background-color: $primaryColor;
+                margin-bottom: 5px;
+
+                &:hover {
+                    background-color: $accentColor;
+
+                    &>a {
+                        color: $primaryColor;
+                    }
+                }
 
                 &>a {
                     text-decoration: none;
-                    color: #000;
+                    color: $secondaryColor;
                 }
             }
 
@@ -56,5 +100,23 @@ section#main {
 
     &>footer {
         grid-area: foot;
+        text-align: center;
+        background-color: $primaryColor;
+        color: $secondaryColor;
+
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    section#main {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "title title"
+            "head head"
+            "main main"
+            "sidebar sidebar"
+            "foot foot";
+        grid-template-rows: auto auto 1fr auto auto;
+
     }
 }
