@@ -1,0 +1,23 @@
+{
+  "name": "css-grid",
+  "version": "1.0.0",
+  "description": "Practice files for CSS Grid",
+  "main": "index.js",
+  "dependencies": {
+    "gh-pages": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mzavada/CSS-Grid.git"
+  },
+  "author": "Matthew Zavada",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mzavada/CSS-Grid/issues"
+  },
+  "homepage": "https://github.com/mzavada/CSS-Grid#readme"
+}
