@@ -5,6 +5,7 @@
   "main": "index.js",
   "homepage": "https://mzavada.github.io/CSS-Grid",
   "scripts": {
+    "git": "git add . && git commit -m",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
@@ -14,7 +15,8 @@
   "author": "Matthew Zavada",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mzavada/CSS-Grid/issues"
+    "url": "https://github.com/mzavada/CSS-Grid/issues",
+    "email": "zavadawebdev@gmail.com"
   },
   "dependencies": {
     "gh-pages": "^2.0.1",
