@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "Practice files for CSS Grid",
   "main": "index.js",
-  "dependencies": {
-    "gh-pages": "^2.0.1"
-  },
-  "devDependencies": {},
+  "homepage": "https://mzavada.github.io/CSS-Grid",
   "scripts": {
     "deploy": "gh-pages -d dist"
   },
@@ -19,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/mzavada/CSS-Grid/issues"
   },
-  "homepage": "https://github.com/mzavada/CSS-Grid#readme"
+  "dependencies": {
+    "gh-pages": "^2.0.1",
+    "node-sass": "^4.10.0"
+  },
+
+  "devDependencies": {
+    "gh-pages-deploy": "^0.5.0"
+  }
 }
