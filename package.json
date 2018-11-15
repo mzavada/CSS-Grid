@@ -6,7 +6,7 @@
   "homepage": "https://mzavada.github.io/CSS-Grid",
   "scripts": {
     "git": "git add . && git commit -m",
-    "deploy": "gh-pages -d dist"
+    "deploy": "git push && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
